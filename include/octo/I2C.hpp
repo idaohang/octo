@@ -51,8 +51,10 @@ namespace Octo {
       void write(uint8_t slaveAddress, uint8_t registerAddress, uint8_t data, bool endOfTransaction = true);
 
       // -- Other utility methods --
+      // Combined read/write to set/clear one or more bits of a register
       void setBits(uint8_t slaveAddress, uint8_t registerAddress, uint8_t value, uint8_t mask);
 
+      // Combined read/write to set/clear a single bit of a register (wraps method above)
       void setBit(uint8_t slaveAddress, uint8_t registerAddress, uint8_t value, bool set = true);
 
   }; // Class I2C

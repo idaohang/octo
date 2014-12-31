@@ -119,6 +119,7 @@ namespace Octo {
   }
 
   // -- Other utility methods --
+  // Combined read/write to set/clear one or more bits of a register
   void I2C::setBits(uint8_t slaveAddress, uint8_t registerAddress, uint8_t value, uint8_t mask) {
     // Get current register value
     uint8_t currentValue = read(slaveAddress, registerAddress);
@@ -131,6 +132,7 @@ namespace Octo {
       write(slaveAddress, registerAddress, newValue);
   }
 
+  // Combined read/write to set/clear a single bit of a register (wraps method above)
   void I2C::setBit(uint8_t slaveAddress, uint8_t registerAddress, uint8_t value, bool set) {
     if (set)
       setBits(slaveAddress, registerAddress, value, value);
