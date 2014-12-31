@@ -1,9 +1,10 @@
-#include "LinuxI2C.hpp"
-#include "MPL3115A2.hpp"
+#include <octo/LinuxI2C.hpp>
+#include <octo/MPL3115A2.hpp>
 //#include "MPU9150.hpp"
 //#include "Si4463.hpp"
 
-#include <memory> // Shared pointers
+#include <iostream> // printf
+#include <memory>   // Shared pointers
 
 
 // Global constants
